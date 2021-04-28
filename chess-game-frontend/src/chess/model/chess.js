@@ -14,6 +14,33 @@ class Game {
         this.thisPlayersColorIsWhite = thisPlayersColorIsWhite 
         this.chessBoard = this.makeStartingBoard() // the actual chessBoard
         this.chess = new Chess()
+
+        this.toCoord = thisPlayersColorIsWhite ? {
+            0:8, 1:7, 2: 6, 3: 5, 4: 4, 5: 3, 6: 2, 7: 1
+        } : {
+            0:1, 1:2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8
+        }
+        
+        this.toAlphabet = thisPlayersColorIsWhite ? {
+            0:"a", 1:"b", 2: "c", 3: "d", 4: "e", 5: "f", 6: "g", 7: "h"
+        } : {
+            0:"h", 1:"g", 2: "f", 3: "e", 4: "d", 5: "c", 6: "b", 7: "a"
+        }
+
+        this.toCoord2 = thisPlayersColorIsWhite ? {
+            8:0, 7:1, 6: 2, 5: 3, 4: 4, 3: 5, 2: 6, 1: 7
+        } : {
+            1:0, 2:1, 3: 2, 4: 3, 5: 4, 6: 5, 7: 6, 8: 7
+        }
+        
+        this.toAlphabet2 = thisPlayersColorIsWhite ? {
+            "a":0, "b":1, "c":2, "d":3, "e":4, "f":5, "g":6, "h":7
+        } : {
+            "h":0, "g":1, "f":2, "e":3, "d":4, "c":5, "b":6, "a":7
+        }
+
+        this.nQueens = 1
+
     }
 
     makeStartingBoard() {
