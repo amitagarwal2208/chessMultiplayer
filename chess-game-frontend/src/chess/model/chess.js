@@ -50,6 +50,21 @@ class Game {
         this.chessBoard = newBoard
     }
 
+
+    toChessMove(finalPosition, to2D) {
+      
+        let move 
+
+        if (finalPosition[0] > 100) {
+            move = this.toAlphabet[to2D[finalPosition[0]]] + this.toCoord[to2D[finalPosition[1]]]
+        } else {
+            move = this.toAlphabet[finalPosition[0]] + this.toCoord[finalPosition[1]]
+        }
+       
+        return move
+    }
+
+
     makeStartingBoard() {
         const backRank = ["rook", "knight", "bishop", "queen", "king", "bishop", "knight", "rook"]
         var startingChessBoard = []
