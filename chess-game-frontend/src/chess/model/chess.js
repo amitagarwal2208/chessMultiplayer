@@ -43,6 +43,13 @@ class Game {
 
     }
 
+    getBoard() {
+        return this.chessBoard
+    }
+    setBoard(newBoard) {
+        this.chessBoard = newBoard
+    }
+
     makeStartingBoard() {
         const backRank = ["rook", "knight", "bishop", "queen", "king", "bishop", "knight", "rook"]
         var startingChessBoard = []
